@@ -10,82 +10,103 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="cabb.css">
+  <link rel="stylesheet" href="cabb.css">
 
 </head>
 
-<body background="reg.jpg">
-    <nav class="navbar navbar-light ">
-        <div class="container-fluid-center" style="font-size: 60px; text-align: center; background-color: yellow;color: red;width: 100%;">
-            <img src="logo.png"  width="60" height="60" class="d-inline-block align-text-top">
-            MyRide
-          
-        </div>
-      </nav>
-      <div class="fl">
-        <form >
-<div class="row g-3" style="justify-content: center;">
-          <div class="col-4">
-              <label for="fullName" class="form-label">Full Name</label>
-              <input type="text" class="form-control" id="fullName" placeholder="your name">
-            </div>
-          </div>
-          <div class="row g-3" style="justify-content: center;">
-            <div class="col-4">
-              <label for="mobileNum" class="form-label">Contact Number</label>
-              <input type="tel" class="form-control" id="mobileNum" placeholder="your phone number">
-            </div>
-          </div>
+<body background="car.webp">
+  <nav class="navbar navbar-light ">
+    <div class="container-fluid-center"
+      style="font-size: 60px; text-align: center; background-color: yellow;color: red;width: 100%;">
+      <img src="logo.png" width="60" height="60" class="d-inline-block align-text-top">
+      MyRide
 
-          <div class="row g-3" style="justify-content: center;">
-  
-          <div class="col-md-4">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
-          </div>
+    </div>
+  </nav>
+  <div class="fl">
+    <form method="post" id="loginform"  name="loginform" onsubmit="validate(event);">
+      <div class="row g-3" style="justify-content: center;">
+        <div class="col-4">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName"  name="fullName"  placeholder="your name">
         </div>
-        <div class="row g-3" style="justify-content: center;">
-
-          <div class="col-md-4">
-            <label for="inputPassword4" class="form-label"> New Password</label>
-            <input type="password" class="form-control" id="inputPassword4">
-          </div>
-        </div>
-        <div class="row g-3" style="justify-content: center;">
-
-          <div class="col-md-4">
-              <label for="inputPassword4" class="form-label"> confirm Password</label>
-              <input type="password" class="form-control" id="inputPassword4">
-            </div>
-          </div>
-            
-          
-        <div class="row g-3" style="justify-content: center;">
-          <div class="col-md-4" style="color: red; font-size:larger;">
-            <input type="checkBox" for="terms" href="terms.html " >I agree to the terms and conditions.
-          </div>
-        </div>
-         
-        <div class="row g-3" style="justify-content: center;">
-          
-          <div class="col-1">
-            <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Sign in</button>
-          </div>
-        </div>
-
-        </form>
-        <a href="home.html" style="color: violet;font-size:larger;margin-left:30px;">return home</a>
       </div>
-    
+      <div class="row g-3" style="justify-content: center;">
+        <div class="col-4">
+          <label for="mobileNum" class="form-label">Contact Number</label>
+          <input type="tel" class="form-control" id="mobileNum" name="mobileNum" placeholder="your phone number">
+        </div>
+      </div>
 
-  
+      <div class="row g-3" style="justify-content: center;">
+
+        <div class="col-md-4">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+      </div>
+      <div class="row g-3" style="justify-content: center;">
+
+        <div class="col-md-4">
+          <label for="password" class="form-label"> New Password</label>
+          <input type="password" class="form-control" id="password"  name="password"  minlength="8" maxlength="10" required>
+        </div>
+      </div>
+      <div class="row g-3" style="justify-content: center;">
+
+        <div class="col-md-4">
+          <label for="password2" class="form-label"> confirm Password</label>
+          <input type="password" class="form-control" id="password2" name="password2">
+        </div>
+      </div>
+
+
+      <div class="row g-3" style="justify-content: center;">
+        <div class="col-md-4" style="color: red; font-size:larger;">
+          <input type="checkBox" for="terms" href="terms.html ">I agree to the <a href="test.html">terms and conditions.</a> 
+        </div>
+      </div>
+
+      <div class="row g-3" style="justify-content: center;">
+
+        <div class="col-1">
+          <button type="submit" class="btn btn-primary btn-fluid" style="margin-top: 10px;" id="btn-login" name="btn-login">Sign
+            in</button>
+        </div>
+      </div>
+
+    </form>
+    <a href="home.html" style="color: violet;font-size:larger;margin-left:30px;">return home</a>
+  </div>
+
+
+
   <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  <script>
+    var btnLogin = document.getElementById('btn-login');
+
+    function validate(e) {
+                e.preventDefault();
+    }
+    var elements = document.querySelectorAll('#loginform input');
+        elements.forEach(e=>{
+            e.addEventListener('keyup', function(){
+                //console.log(document.getElementById('password').validity.valid);
+                
+
+                if(email.value == "" || password.value == ""){
+                    btnLogin.setAttribute('disabled', true);
+                }
+                else
+                {
+                    btnLogin.removeAttribute('disabled');
+                }
+            })
+        })
+    
+   
+    
   </script>
 </body>
 

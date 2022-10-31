@@ -50,13 +50,7 @@
     font-size: 17px;
   }
 
-  body
-  {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: contain;
-  }
+  
   .topnav input[type=text] {
     border: 1px solid rgb(232, 27, 27);
   }
